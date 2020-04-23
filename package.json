@@ -1,0 +1,27 @@
+{
+  "name": "cssnamegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalex375/cssnamegenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalex375/cssnamegenerator/issues"
+  },
+  "homepage": "https://github.com/kalex375/cssnamegenerator#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "bounty": "^1.2.2",
+    "jquery": "^3.5.0"
+  }
+}
