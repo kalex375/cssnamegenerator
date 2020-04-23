@@ -1,195 +1,26 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap'); //@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+html,
+body {
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #ffffff 0%, #e0dd86 25%, #c4ad77 50%, #b38fb5 75%, #a7cae5 100%);
-}
+    cursor: pointer;
+    
+    background-color: #330033;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
 
-
-#box {
-    font-size: 20vh;
+    font-family: 'Roboto Mono', monospace;
+    //font-weight: bold;
+    font-size: 20vmin;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    fill: #fff;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    //letter-spacing: -0.045em;
-    color: #FFF;
-    text-align: center;
-    //text-shadow: 0 2px 8px rgba(158, 143, 32, 0.77), 0 2px 0 rgba(151, 136, 47, 0.24);
-    //transition: all 0.2s ease;
-    overflow: hidden;
-}
-
-
-.spinner {
-    opacity: 1;
-    cursor: pointer;
-    //transition: all 0.2s ease;
-    display: block;
-    //width: 100%;
-    //padding: 10vh;
-    position: relative;
-
-}
-
-.point:hover .spinner {
-    text-shadow: 0 4px 4px rgba(255, 255, 255, 0.2), 0 6px 6px rgba(255, 255, 255, 0.4), 0 8px 18px rgba(255, 255, 255, 0.8), 0 22px 18px rgba(255, 255, 255, 0.5), 0 -4px 4px rgba(255, 255, 255, 0.2), 0 -6px 6px rgba(255, 255, 255, 0.4), 0 -8px 18px rgba(255, 255, 255, 0.8), 0 -22px 18px rgba(255, 255, 255, 0.5);
-    //color: rgba(255, 255, 255, 0.2);
-    //top: 12px;
-    animation: popInBottomTop 1s infinite;
-}
-
-
-@keyframes mov {
-    0% {
-        transform: translatey(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    100% {
-        transform: translatey(100%);
-        opacity: 0;
-    }
-}
-
-//------------------------------------------------------------------------------
-// MIXINS
-//------------------------------------------------------------------------------
-
-@mixin name($name) {
-    -webkit-animation-name: $name;
-    animation-name: $name;
-}
-
-@mixin delay($time) {
-    -webkit-animation-delay: $time;
-    animation-delay: $time;
-}
-
-@mixin bezier($bezier) {
-    -webkit-animation-timing-function: $bezier;
-    animation-timing-function: $bezier;
-}
-
-@mixin transform($transform...) {
-    -webkit-transform: $transform;
-    transform: $transform;
-}
-
-@mixin duration($time) {
-    -webkit-animation-duration: $time;
-    animation-duration: $time;
-}
-
-@mixin transformOrigin($origin) {
-    -webkit-transform-origin: $origin;
-    transform-origin: $origin;
-}
-
-@mixin backFaceVisibility($state) {
-    -webkit-backface-visibility: $state;
-    backface-visibility: $state;
-}
-
-//**********
-
-//------------------------------------------------------------------------------
-// EASINGS
-//------------------------------------------------------------------------------
-
-// Cubic
-$easeInCubic    : cubic-bezier(0.550, 0.055, 0.675, 0.190);
-$easeOutCubic   : cubic-bezier(0.215, 0.610, 0.355, 1.000);
-$easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1.000);
-
-// Circ
-$easeInCirc     : cubic-bezier(0.600, 0.040, 0.980, 0.335);
-$easeOutCirc    : cubic-bezier(0.075, 0.820, 0.165, 1.000);
-$easeInOutCirc  : cubic-bezier(0.785, 0.135, 0.150, 0.860);
-
-// Expo
-$easeInExpo     : cubic-bezier(0.950, 0.050, 0.795, 0.035);
-$easeOutExpo    : cubic-bezier(0.190, 1.000, 0.220, 1.000);
-$easeInOutExpo  : cubic-bezier(1.000, 0.000, 0.000, 1.000);
-
-// Quad
-$easeInQuad     : cubic-bezier(0.550, 0.085, 0.680, 0.530);
-$easeOutQuad    : cubic-bezier(0.250, 0.460, 0.450, 0.940);
-$easeInOutQuad  : cubic-bezier(0.455, 0.030, 0.515, 0.955);
-
-// Quart
-$easeInQuart    : cubic-bezier(0.895, 0.030, 0.685, 0.220);
-$easeOutQuart   : cubic-bezier(0.165, 0.840, 0.440, 1.000);
-$easeInOutQuart : cubic-bezier(0.770, 0.000, 0.175, 1.000);
-
-// Quint
-$easeInQuint    : cubic-bezier(0.755, 0.050, 0.855, 0.060);
-$easeOutQuint   : cubic-bezier(0.230, 1.000, 0.320, 1.000);
-$easeInOutQuint : cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
-// Sine
-$easeInSine     : cubic-bezier(0.470, 0.000, 0.745, 0.715);
-$easeOutSine    : cubic-bezier(0.390, 0.575, 0.565, 1.000);
-$easeInOutSine  : cubic-bezier(0.445, 0.050, 0.550, 0.950);
-
-// Back
-$easeInBack     : cubic-bezier(0.600, -0.280, 0.735, 0.045);
-$easeOutBack    : cubic-bezier(0.175,  0.885, 0.320, 1.275);
-$easeInOutBack  : cubic-bezier(0.680, -0.550, 0.265, 1.550);
-
-// classic
-$easeInOut      : cubic-bezier(0.420, 0.000, 0.580, 1.000);
-
-@keyframes popInBottomTop {
-    0% {
-        @include transform(translate3d(0,200px,0) scale3d(.1, .1, .1));
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-        @include bezier($easeInSine);
-        @include transform(translate3d(0,0,0) scale3d(1.08, 1.08, 1.08));
-    }
-    20% {
-        @include bezier(cubic-bezier(0.420, 0.000, 0.580, 1.000));
-        @include transform(translate3d(0,0,0) scale3d(1, 1, 1));
-    }
-    30% {
-        @include bezier(cubic-bezier(0.420, 0.000, 0.580, 1.000));
-        @include transform(translate3d(0,0,0) scale3d(1.03, 1.03, 1.03));
-    }
-    40% {
-        @include bezier($easeOutQuad);
-        @include transform(translate3d(0,0,0) scale3d(1, 1, 1));
-    }
-
-    50% {
-        @include transform(translate3d(0,-200px,0) scale3d(.1, .1, .1));
-        opacity: 0;
-    }
-    60% {
-        opacity: 1;
-        @include bezier($easeInSine);
-        @include transform(translate3d(0,0,0) scale3d(1.08, 1.08, 1.08));
-    }
-    70% {
-        @include bezier(cubic-bezier(0.420, 0.000, 0.580, 1.000));
-        @include transform(translate3d(0,0,0) scale3d(1, 1, 1));
-    }
-    80% {
-        @include bezier(cubic-bezier(0.420, 0.000, 0.580, 1.000));
-        @include transform(translate3d(0,0,0) scale3d(1.03, 1.03, 1.03));
-    }
-    100% {
-        @include bezier($easeOutQuad);
-        @include transform(translate3d(0,0,0) scale3d(1, 1, 1));
-    }
-    
 }

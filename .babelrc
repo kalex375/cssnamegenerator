@@ -1,0 +1,7 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    // Stage 0
+    "@babel/plugin-proposal-function-bind",
+  ]
+}
