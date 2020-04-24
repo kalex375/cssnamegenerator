@@ -6,7 +6,8 @@
   "scripts": {
     "build":"parcel build index.html --no-cache",
     "serve":"parcel index.html --no-cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy":"git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
