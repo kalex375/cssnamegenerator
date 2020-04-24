@@ -38,7 +38,7 @@ function runGenrator(){
         to = fitToCenter(to, maxLenth)
     
         console.log('"' + from + '"', '"' + to + '"')
-        odoo({ el: '.box', from: from, to: to, animationDelay: 1000 });
+        odoo({ el: '.box', from: from, to: to, animationDelay: 50 });
         from = to
         setTimeout(()=>{
             $('body').on('click.gen',runGenrator)
