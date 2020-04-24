@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 import odoo from './lib/bounty';
 
 const classes = [

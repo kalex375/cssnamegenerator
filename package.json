@@ -2,10 +2,10 @@
   "name": "cssnamegenerator",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.html",
+ 
   "scripts": {
-    "build":"parcel build index.html",
-    "serve":"parcel index.html",
+    "build":"parcel build index.html --no-cache",
+    "serve":"parcel index.html --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +26,11 @@
   },
   "dependencies": {
     "jquery": "^3.5.0"
+  },
+  "browser":"dist/index.html",
+  "targets": {
+    "browser": {
+      "publicUrl": "./"
+    }
   }
 }
